@@ -22,20 +22,22 @@ export const fetchData = () => dispatch => {
                 type: FETCH_DATA_FAILURE,
                 payload: error
             })
-        })
-export const addSmurfs = () => dispatch => {
+        })}
+
+
+export const addSmurfs = (smurfs) => dispatch => {
     dispatch({type: ADD_SMURF_START});
-    axios
-        .post("http://localhost:3333/smurfs")
+    return axios
+        .post("http://localhost:3333/smurfs", smurfs)
         .then(res=> {
             dispatch({
                 type: ADD_SMURF_SUCCESS,
                 payload: res.data
             })
         })
-        .catch(err => dispatch({ 
+        .catch(error => dispatch({ 
             type: ADD_SMURF_FAILURE, 
             payload: error
-    }))
+    }), true)
 }
-}
+
