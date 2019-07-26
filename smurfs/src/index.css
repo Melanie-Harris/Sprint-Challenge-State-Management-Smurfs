@@ -2,4 +2,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS50NqR47aUDUZPNhiX0nkCqh0U6EgPNaiD6Dk710_rNHyv4R1f7g);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+}
+
+.app {
+  opacity: .8;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 3%;
+  width: 50%;
+}
+
+.container {
+  background-color: aliceblue;
+  padding: 10%;
+  align-content:  center;
 }
